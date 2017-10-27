@@ -1,14 +1,17 @@
 
-.featured h2{
+.site-container h2{
   font-size: 2.5rem;
   font-family: "Open Sans";
   font-weight: 700;
-  color: #337ab7;
+  color: #399bd1;
 }
-.featured h3{
+.site-container h3{
   font-size: 1.7rem;
   font-family: "Open Sans";
   font-weight: 700;
+}
+h3.highlighted{
+  color: #399bd1;
 }
 .active{
   color: blue;
@@ -32,7 +35,7 @@
   justify-content: center;
 }
 .jumbotron .container-fluid h1{
-  font-family: "Monoton";
+  font-family: "Monoton",serif;
   font-size: 100px;
   color: white;
   text-shadow: 1px 1px 2px black;
@@ -40,40 +43,80 @@
   margin-top: 100px;
 }
 .jumbotron .container-fluid p{
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: 400;
   color: white;
   text-shadow: 1px 1px 2px black;
   text-align: center;
 }
 .jumbotron .btn {
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-size: 20px;
   padding: 15px 45px;
   margin: 80px;
+  background-color: #399bd1;
 }
-.featured {
+/* Site Containers */
+.site-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   flex-wrap: nowrap;
-  width: 780px;
+  width: 1024px;
   margin: 0px auto 0px auto;
 }
+#featured {
+  justify-content: flex-start;
+}
+#projects {
+  justify-content: space-between;
+}
+#heading {
+  justify-content: flex-start;
+}
+/* Other Containers */
 .image-container {
   width: 50%;
   margin-top: 20px;
 }
-.image-container img{
+.feature-img-container {
+  width: 50%;
+}
+.project-img-container {
   width: 100%;
-  opacity: 0.7;
 }
 .text-container {
   width: 25%;
   margin-left: 30px;
 }
+.project-container{
+  width: 30%;
+  margin: 0px 10px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+/* Element Styles */
+.image-container img{
+  width: 100%;
+  opacity: 0.7;
+}
 
+@media only screen and (max-width: 1024px){
+  .site-container {
+    width: 920px;
+  }
+}
+@media only screen and (max-width: 920px){
+  .site-container {
+    width: 780px;
+  }
+}
 @media only screen and (max-width: 780px){
+  .site-container {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 768px){
   .navbar .navbar-brand{
     display: none;
   }
@@ -82,10 +125,10 @@
     background-size: cover;
     margin-top: 100px;
   }
-  .featured {
+  .site-container {
     flex-wrap: wrap;
   }
-  .featured h2{
+  .site-container  h2{
     margin-left: 30px;
   }
   .image-container {
@@ -93,7 +136,7 @@
     margin: 0px 30px;
   }
   .text-container {
-    width: 40%;
+    width: 45%;
     margin: 0px 0px 0px 30px;
   }
 }
